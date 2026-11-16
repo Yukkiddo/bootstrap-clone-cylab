@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyLab Academy Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-body">
+
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg bg-black border-bottom border-secondary-subtle" data-bs-theme="dark">
+  <div class="container py-2 px-4">
+    <!-- Brand -->
+    <a href="#" class="navbar-brand mb-0 d-flex align-items-center">
+      <i class="bi bi-shield-fill-check text-orange fs-2 me-2"></i>
+      <span class="lh-1"><span class="fw-bold d-block">CyLab</span><small class="text-uppercase" style="font-size:.6rem;letter-spacing:.15em">Security Academy</small></span>
+    </a>
+    <!-- Toggler -->
+    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end bg-black" id="offcanvasNavbar" tabindex="-1">
+      <div class="offcanvas-header pb-0 px-4">
+        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">CyLab Academy</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body pt-0 px-4 align-items-lg-center">
+        <hr class="d-lg-none text-white-50">
+        <!-- Menu utama -->
+        <ul class="navbar-nav mx-lg-auto flex-lg-row">
+          <li class="nav-item"><a href="#" class="nav-link active px-lg-3">Dashboard</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle px-lg-3" data-bs-toggle="dropdown">Learn</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Learning Paths</a></li>
+              <li><a class="dropdown-item" href="#">Challenge Library</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle px-lg-3" data-bs-toggle="dropdown">Classroom</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">My Classes</a></li>
+              <li><a class="dropdown-item" href="#">Assignments</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link px-lg-3">Events</a></li>
+        </ul>
+        <hr class="d-lg-none text-white-50">
+        <!-- Kanan -->
+        <ul class="navbar-nav flex-row flex-wrap align-items-center gap-2">
+          <li class="nav-item"><a href="#" class="btn btn-outline-secondary rounded-pill text-white"><i class="bi bi-heart-fill text-orange me-2"></i>Support</a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-terminal"></i></a></li>
+          <li class="nav-item dropdown" data-bs-theme="light">
+            <button type="button" class="btn nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-brightness-high-fill"></i><span class="d-lg-none ms-2">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button" data-theme="light"><small><i class="bi bi-brightness-high-fill me-2"></i>Light</small></button></li>
+              <li><button class="dropdown-item active bg-orange" type="button" data-theme="dark"><small><i class="bi bi-moon-stars-fill me-2"></i>Dark</small></button></li>
+              <li><button class="dropdown-item" type="button" data-theme="auto"><small><i class="bi bi-circle-half me-2"></i>Auto</small></button></li>
+            </ul>
+          </li>
+          <li class="nav-item"><div class="avatar">KI</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="container-fluid px-3 px-lg-4 mt-3">
+  <div id="hero" class="p-4 p-lg-5">
+    <div class="small mb-4"><i class="bi bi-calendar3 me-2"></i>Monday, Nov 16</div>
+    <h1 class="display-5 fw-bold mb-4">Good evening, <span class="hl">kiddo0</span></h1>
+    <p class="fs-5 mb-4">Pick up where you left off, or jump into something new. Your next challenge is one click away.</p>
+    <div class="d-flex flex-column flex-md-row">
+      <a href="#" class="btn btn-orange btn-lg mb-3 me-md-3 px-4 py-2">Start a Learning Path</a>
+      <a href="#" class="btn btn-orange btn-lg mb-3 px-4 py-2">Browse the Challenge Library</a>
+    </div>
+  </div>
+</div>
+
+<!-- Konten utama -->
+<div class="container-fluid px-3 px-lg-4 py-5">
+  <div class="row g-4">
+
+    <!-- Kolom kiri: Progress -->
+    <div class="col-lg-3 order-2 order-lg-1" id="progress">
+      <h5 class="fw-bold mb-3">Your Progress</h5>
+      <div class="card rounded-4 mb-3">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-center mb-1"><i class="bi bi-fire text-orange fs-3 me-2"></i><span class="fs-3 fw-bold">6</span></div>
+          <div class="text-body-secondary mb-4">Day Streak</div>
+          <small>New personal best: <strong>6 days</strong> and counting!</small>
+        </div>
+      </div>
+      <div class="card rounded-4 mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-center mb-1"><i class="bi bi-puzzle fs-4 me-2"></i><span class="fs-3 fw-bold">24</span></div>
+          <div class="text-body-secondary mb-3">Challenges Completed</div>
+          <div class="progress-stacked">
+            <div class="progress" role="progressbar" style="width:50%;height:8px"><div class="progress-bar bg-success"></div></div>
+            <div class="progress" role="progressbar" style="width:50%;height:8px"><div class="progress-bar bg-warning"></div></div>
+          </div>
+        </div>
+      </div>
+      <h6 class="fw-bold mb-3">Open Profile</h6>
+      <div class="card rounded-4 border-warning-subtle">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between mb-2">
+            <div class="fw-semibold"><i class="bi bi-heart-fill text-orange me-2"></i>Keep the Academy free</div>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <small class="text-body-secondary">You've solved 24 challenges here. The Academy stays free for everyone.</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom kanan: Continue -->
+    <div class="col-lg-9 order-1 order-lg-2">
+      <div id="continue" class="p-4">
+        <h4 class="fw-bold mb-4">Continue where you left off</h4>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="card rounded-4 h-100"><div class="card-body p-3">
+              <img class="img-fluid w-100 rounded-3 mb-3 thumb-img" src="assets/images/gencyber.png" alt="GenCyber">
+              <div class="challenge-title mb-2">General Skills in CTF's</div>
+              <p class="small text-body-secondary">Follow along in the Challenge Library with these instructional videos on introductory General Skills…</p>
+              <div class="small text-body-secondary mb-3"><i class="bi bi-flag me-2"></i>10,926 completions</div>
+              <div class="d-flex justify-content-between"><span>8/20 modules</span><span class="fw-semibold">40%</span></div>
+              <div class="progress mt-2"><div class="progress-bar bg-orange" style="width:40%"></div></div>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card rounded-4 h-100"><div class="card-body p-3">
+              <img class="img-fluid w-100 rounded-3 mb-3 thumb-img" src="assets/images/mochi.png" alt="Mochi's Tale">
+              <div class="challenge-title mb-2">Low Level Binary Intro</div>
+              <p class="small text-body-secondary">In this playlist, we present Mochi's Tale, a videogame that will whet your appetite for the low…</p>
+              <div class="small text-body-secondary mb-3"><i class="bi bi-flag me-2"></i>2,241 completions</div>
+              <div class="d-flex justify-content-between"><span>12/46 modules</span><span class="fw-semibold">26%</span></div>
+              <div class="progress mt-2"><div class="progress-bar bg-orange" style="width:26%"></div></div>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card rounded-4 h-100"><div class="card-body p-3">
+              <div class="position-relative mb-3"><img class="img-fluid w-100 rounded-3 thumb-img" src="assets/images/gencyber.png" alt="GenCyber"><div class="thumb-mask"></div></div>
+              <div class="challenge-title mb-2">Forensics in CTF's</div>
+              <p class="small text-body-secondary">Follow along in the Challenge Library with these instructional videos on Forensics topics.</p>
+              <div class="small text-body-secondary mb-3"><i class="bi bi-flag me-2"></i>2,667 completions</div>
+              <div class="d-flex justify-content-between"><span>14/17 modules</span><span class="fw-semibold">82%</span></div>
+              <div class="progress mt-2"><div class="progress-bar bg-orange" style="width:82%"></div></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning paths -->
+  <div id="paths" class="mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold mb-0">Try a learning path</h4>
+      <a href="#" class="fw-semibold text-body text-decoration-underline">View all</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3"><div class="card rounded-4 h-100"><div class="card-body"><i class="bi bi-bug fs-2 text-orange"></i><h6 class="mt-3 fw-bold">Web Exploitation</h6><small class="text-body-secondary">Injection, XSS, and auth bypasses.</small></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card rounded-4 h-100"><div class="card-body"><i class="bi bi-key fs-2 text-orange"></i><h6 class="mt-3 fw-bold">Cryptography</h6><small class="text-body-secondary">From classical ciphers to RSA.</small></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card rounded-4 h-100"><div class="card-body"><i class="bi bi-cpu fs-2 text-orange"></i><h6 class="mt-3 fw-bold">Reverse Engineering</h6><small class="text-body-secondary">Read assembly and decompiled code.</small></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card rounded-4 h-100"><div class="card-body"><i class="bi bi-search fs-2 text-orange"></i><h6 class="mt-3 fw-bold">Digital Forensics</h6><small class="text-body-secondary">Files, memory, and network traces.</small></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="bg-body-tertiary py-5">
+  <div class="container py-3 px-4">
+    <div class="row">
+      <div class="col-lg-3 mb-5">
+        <a href="#" class="d-flex align-items-center mb-2"><i class="bi bi-shield-fill-check text-orange fs-3 me-2"></i><span class="fs-5">CyLab Academy</span></a>
+        <div class="mt-2 text-body-secondary"><small>Free security education, built with the help of <a href="#">our community</a>.</small></div>
+        <div class="mt-2 text-body-secondary"><small>Clone project untuk Praktikum PAW Modul 7.</small></div>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-5"><h5>Learn</h5>
+        <ul class="list-unstyled"><li class="mb-2"><a href="#">Learning Paths</a></li><li class="mb-2"><a href="#">Challenge Library</a></li><li class="mb-2"><a href="#">Events</a></li></ul></div>
+      <div class="col-6 col-lg-2 mb-5"><h5>Classroom</h5>
+        <ul class="list-unstyled"><li class="mb-2"><a href="#">My Classes</a></li><li class="mb-2"><a href="#">Assignments</a></li></ul></div>
+      <div class="col-6 col-lg-2 mb-5"><h5>Community</h5>
+        <ul class="list-unstyled"><li class="mb-2"><a href="#">Discord</a></li><li class="mb-2"><a href="#">GitHub</a></li><li class="mb-2"><a href="#">Support</a></li></ul></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Toggle tema (fitur data-bs-theme Bootstrap 5.3)
+document.querySelectorAll('[data-theme]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var t = btn.dataset.theme;
+    if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-bs-theme', t);
+    btn.closest('ul').querySelectorAll('.dropdown-item').forEach(function (i) { i.classList.remove('active', 'bg-orange'); });
+    btn.classList.add('active', 'bg-orange');
+  });
+});
+</script>
+</body>
+</html>

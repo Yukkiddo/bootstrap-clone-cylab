@@ -1,0 +1,42 @@
+/* ===== Custom CSS (sesuai modul poin 9: kelas utilitas kustom + selector #id) ===== */
+:root { --cy-orange:#f97316; --cy-navy:#0b2a4a; --cy-card:#15171c; }
+body { padding-top: 76px; font-family: "Inter", system-ui, sans-serif; }
+
+.bg-orange { background-color: var(--cy-orange) !important; }
+.text-orange { color: var(--cy-orange) !important; }
+.btn-orange { background: var(--cy-orange); color:#fff; border:0; border-radius:50rem; }
+.btn-orange:hover { background:#ea6a0c; color:#fff; }
+
+/* Hero */
+#hero {
+  background: linear-gradient(120deg, #0a2540 0%, #0b3a66 60%, #0a2540 100%);
+  border-radius: 1rem; color:#fff;
+}
+#hero .hl { color:#4aa3e0; }
+
+/* Cards */
+#progress .card, #continue .card, #paths .card { background: var(--cy-card); border:1px solid rgba(255,255,255,.08); }
+#continue { border:1px solid #fff; border-radius:1rem; }
+.challenge-title { font-family: ui-monospace, "Courier New", monospace; font-weight:700; }
+.progress { height:6px; background:#2a2d34; }
+.progress-bar.bg-orange { background: var(--cy-orange) !important; }
+.badge-easy { background:#0f3d24; color:#4ade80; }
+.badge-medium { background:#4a3a0a; color:#facc15; }
+.badge-feat { background:#3a1a0a; color:#fb923c; }
+
+/* Navbar */
+.navbar .nav-link.active { font-weight:600; }
+.avatar { width:48px; height:48px; border-radius:50%; background:#2a2d34; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:600; }
+
+/* Footer (mengikuti pola #footer a dari modul) */
+#footer a { text-decoration:none; color:inherit; }
+#footer a:hover { text-decoration:underline; color: var(--cy-orange) !important; }
+
+/* Light theme tweak */
+[data-bs-theme="light"] #progress .card, [data-bs-theme="light"] #continue .card, [data-bs-theme="light"] #paths .card { background:#fff; border-color:#dee2e6; }
+[data-bs-theme="light"] #continue { border-color:#212529; }
+
+/* Thumbnail memakai gambar asli (badge sudah ada di dalam gambar) */
+.thumb-img { aspect-ratio: 1072 / 595; object-fit: cover; background:#111214; }
+/* Menutup badge "Featured" pada kartu ke-3 agar sesuai aslinya */
+.thumb-mask { position:absolute; top:0; left:0; width:31%; height:20%; background:#111214; border-top-left-radius:.5rem; }
